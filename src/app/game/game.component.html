@@ -1,33 +1,62 @@
 
 <script type="text/javascript" src="./app.js"></script>
 <div class="board" ng-app='game' ng-controller='gameController'>
-    <h1>Hang Man</h1>
+    <h1><strong>Hang Man</strong></h1>
 
 
-    <div class="inputField" id='d1'>
+    <div class="inputField">
         <input type="text" #enterWord>
         <button mat-raised-button color="primary" (click)="generate(enterWord)">New Word</button>
-        <p>word: {{displayWord}}</p>
+        <button id='restart' mat-raised-button color="primary" (click)="restart()">Play Again</button>
+        <p id="word">word: {{displayWord}}</p>
+    </div>
+
+    <div class="lettersGroup">
+        <ul class="letters">
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(0)" [disabled]='clicked[0]'>a</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(1)" [disabled]='clicked[1]'>b</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(2)" [disabled]='clicked[2]'>c</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(3)" [disabled]='clicked[3]'>d</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(4)" [disabled]='clicked[4]'>e</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(5)" [disabled]='clicked[5]'>f</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(6)" [disabled]='clicked[6]'>g</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(7)" [disabled]='clicked[7]'>h</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(8)" [disabled]='clicked[8]'>i</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(9)" [disabled]='clicked[9]'>j</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(10)" [disabled]='clicked[10]'>k</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(11)" [disabled]='clicked[11]'>l</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(12)" [disabled]='clicked[12]'>m</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(13)" [disabled]='clicked[13]'>n</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(14)" [disabled]='clicked[14]'>o</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(15)" [disabled]='clicked[15]'>p</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(16)" [disabled]='clicked[16]'>q</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(17)" [disabled]='clicked[17]'>r</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(18)" [disabled]='clicked[18]'>s</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(19)" [disabled]='clicked[19]'>t</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(20)" [disabled]='clicked[20]'>u</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(21)" [disabled]='clicked[21]'>v</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(22)" [disabled]='clicked[22]'>w</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(23)" [disabled]='clicked[23]'>x</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(24)" [disabled]='clicked[24]'>y</button></li>
+            <li class="item"><button class='letter' mat-raised-button color="primary" (click)="choose(25)" [disabled]='clicked[25]'>z</button></li>
+        </ul>
+        
+        
+    </div>
+
+    <div style="float: left; margin-top: 18vh; margin-left: -22vw;">
+            <p style="margin-top: -6vh;">correct: {{correctLetters}}</p>
+            <p style="margin-top: 6vh;">incorrect: {{incorrectLetters}}</p>
+            <p style="margin-top: 6vh;">Guesses left: {{guesses}}</p>
+            <p style="margin-top: 6vh;">{{status}}</p>
     </div>
 
     
-
-    <div class="inputField" id='d2'>
-        <input type="text" #player1>
-        <button mat-raised-button color="primary" (click)="submit(player1)">Guess</button>
-        <button mat-raised-button color="primary" (click)="restart()">Play Again</button>
-        <p>correct: {{correctLetters}}</p>
-        <p>incorrect: {{incorrectLetters}}</p>
-        <p>Guesses left: {{guesses}}</p>
-        <p>{{status}}</p>
-    </div>
-
     <div class='man'>
         <canvas id='drawings' height="600px">
 
         </canvas>
     </div>
 
-    
     
 </div>

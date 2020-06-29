@@ -15,10 +15,14 @@ export class GameComponent implements OnInit {
   public guesses = 10;
   public lettersLeft = 0;
   public status = '';
+  public clicked = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    for(let i=0;i<26;i++){
+      this.clicked.push(false);
+    }
   }
 
   head(): void {
@@ -143,8 +147,8 @@ export class GameComponent implements OnInit {
     input.value = '';
   }
   
-  submit(input): void{
-    let letter = input.value;
+  submit(letter): void{
+    
     if(this.word.includes(letter)){
       this.correctLetters += letter;
       for(let i=0;i<this.word.length;i++){
@@ -153,7 +157,7 @@ export class GameComponent implements OnInit {
             this.displayWord = this.displayWord.slice(0, i) + this.word[i] + this.displayWord.slice(i+1, this.word.length);
           }
       }
-      input.value = '';
+      
     }else{
       this.guesses--;
       if(this.guesses===9){
@@ -178,14 +182,13 @@ export class GameComponent implements OnInit {
         this.rightLeg();
       }
       this.incorrectLetters += letter;
-      input.value = '';
+      
     }
 
     if(this.guesses==0){
       this.displayWord = this.word;
       this.status = 'You Lost :(';
-    }
-    if(!this.displayWord.includes('*')){
+    }else if(!this.displayWord.includes('*') && this.displayWord != ''){
       this.displayWord = this.word;
       this.status = 'You Won :)';
     }
@@ -199,6 +202,16 @@ export class GameComponent implements OnInit {
     this.guesses = 10;
     this.lettersLeft = 0;
     this.status = '';
+    let canvas: any = document.getElementById('drawings');
+    let context: any = canvas.getContext('2d');
+    context.clearRect(0, 0, 300, 600);
   }
+
+  choose(id): void{
+    let letters = document.getElementsByClassName('letter');
+    this.submit(letters[id].textContent);
+    this.clicked[id] = true;
+  }
+
 
 }

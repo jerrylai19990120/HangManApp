@@ -8,15 +8,15 @@
 h1{
     color: #4232EB;
     font-family: fantasy;
-    margin-top: 6vw;
+    margin-top: 1.6vw;
     margin-left: 46vw;
 }
 
 
 
 .inputField{
-    margin-left: 18vw;
-    margin-top: 18vh;
+    margin-left: 10vw;
+    margin-top: 6vh;
 }
 
 input{
@@ -30,17 +30,38 @@ input{
 p{
     color: #4232EB;
     font-size: large;
-    font-family: fantasy;
 }
 
 .man{
     width: 20vw;
     height: 52vh;
     float: right;
-    margin-right: 30vw;
-    margin-top: -52vh;
+    margin-right: 26vw;
+    margin-top: -36vh;
     border: 2px dashed white;
 }
 
+.letters{
+    list-style: none;
+}
+
+.item{
+    float: left;
+}
+
+.lettersGroup{
+    width: 36vw;
+    margin-top: 10vh;
+    margin-left: 6vw;
+}
+
+#word{
+    margin-top: 8vh;
+    margin-left: 8vw;
+}
+
+#restart{
+    margin-left: 4.8vw;
+}
 
 
