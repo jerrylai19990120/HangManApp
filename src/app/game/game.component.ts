@@ -182,11 +182,23 @@ export class GameComponent implements OnInit {
     }
 
     if(this.guesses==0){
+      this.displayWord = this.word;
       this.status = 'You Lost :(';
     }
     if(!this.displayWord.includes('*')){
+      this.displayWord = this.word;
       this.status = 'You Won :)';
     }
+  }
+
+  restart(): void{
+    this.word = '';
+    this.displayWord = '';
+    this.correctLetters = '';
+    this.incorrectLetters = '';
+    this.guesses = 10;
+    this.lettersLeft = 0;
+    this.status = '';
   }
 
 }

@@ -15,6 +15,7 @@
     <div class="inputField" id='d2'>
         <input type="text" #player1>
         <button mat-raised-button color="primary" (click)="submit(player1)">Guess</button>
+        <button mat-raised-button color="primary" (click)="restart()">Play Again</button>
         <p>correct: {{correctLetters}}</p>
         <p>incorrect: {{incorrectLetters}}</p>
         <p>Guesses left: {{guesses}}</p>
@@ -25,7 +26,6 @@
         <canvas id='drawings' height="600px">
 
         </canvas>
-
     </div>
 
     
