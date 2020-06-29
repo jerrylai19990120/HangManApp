@@ -7,7 +7,7 @@
 
 h1{
     color: #4232EB;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: fantasy;
     margin-top: 6vw;
     margin-left: 46vw;
 }
@@ -15,9 +15,8 @@ h1{
 
 
 .inputField{
-    
-    margin-left: 23vw;
-    margin-top: 20vh;
+    margin-left: 18vw;
+    margin-top: 18vh;
 }
 
 input{
@@ -25,10 +24,23 @@ input{
     background-color: white;
     width: 8vw;
     height: 3vh;
+    margin-right: 3vw;
 }
 
-#btn1{
-    
+p{
+    color: #4232EB;
+    font-size: large;
+    font-family: fantasy;
 }
+
+.man{
+    width: 20vw;
+    height: 52vh;
+    float: right;
+    margin-right: 38vw;
+    margin-top: -54vh;
+    border: 2px dashed white;
+}
+
 
 
