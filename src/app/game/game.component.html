@@ -1,0 +1,33 @@
+
+<script type="text/javascript" src="./app.js"></script>
+<div class="board" ng-app='game' ng-controller='gameController'>
+    <h1>Hang Man</h1>
+
+    <div class="inputField">
+        <input type="text" #enterWord>
+    <button type="submit" (click)="generate(enterWord)">submit</button>
+    </div>
+
+    <div class="field">
+        <p>word: {{displayWord}}</p>
+    </div>
+
+    <div class="inputField">
+        <input type="text" #player1>
+        <button type="submit" (click)="submit1(player1)">submit</button>
+        <p>correct: {{correctLetters}}</p>
+        <p>incorrect: {{incorrectLetters}}</p>
+        <p>Guesses left: {{guesses}}</p>
+        <p>{{status1}}</p>
+    </div>
+
+    <div class="inputField">
+        <input type="text" #player2>
+        <button type="submit" (click)="submit2(player2)">submit</button>
+        <p>correct: {{correctLetters}}</p>
+        <p>incorrect: {{incorrectLetters}}</p>
+        <p>Guesses left: {{guesses}}</p>
+        <p>{{status2}}</p>
+    </div>
+    
+</div>
