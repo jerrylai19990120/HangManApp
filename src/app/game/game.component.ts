@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -13,8 +14,7 @@ export class GameComponent implements OnInit {
   public incorrectLetters = '';
   public guesses = 6;
   public lettersLeft = 0;
-  public status1 = '';
-  public status2 = '';
+  public status = '';
 
   constructor() { }
 
@@ -30,7 +30,7 @@ export class GameComponent implements OnInit {
     input.value = '';
   }
   
-  submit1(input): void{
+  submit(input): void{
     let letter = input.value;
     if(this.word.includes(letter)){
       this.correctLetters += letter;
@@ -48,35 +48,10 @@ export class GameComponent implements OnInit {
     }
 
     if(this.guesses==0){
-      this.status1 = 'You Lost :(';
+      this.status = 'You Lost :(';
     }
     if(!this.displayWord.includes('*')){
-      this.status1 = 'You Won :)';
-    }
-  }
-
-  submit2(input): void{
-    let letter = input.value;
-    if(this.word.includes(letter)){
-      this.correctLetters += letter;
-      for(let i=0;i<this.word.length;i++){
-          if(this.word[i]===letter){
-            this.lettersLeft--;
-            this.displayWord = this.displayWord.slice(0, i) + this.word[i] + this.displayWord.slice(i+1, this.word.length);
-          }
-      }
-      input.value = '';
-    }else{
-      this.guesses--;
-      this.incorrectLetters += letter;
-      input.value = '';
-    }
-
-    if(this.guesses==0){
-      this.status2 = 'You Lost :(';
-    }
-    if(!this.displayWord.includes('*')){
-      this.status2 = 'You Won :)';
+      this.status = 'You Won :)';
     }
   }
 

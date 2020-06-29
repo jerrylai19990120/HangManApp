@@ -3,31 +3,24 @@
 <div class="board" ng-app='game' ng-controller='gameController'>
     <h1>Hang Man</h1>
 
-    <div class="inputField">
-        <input type="text" #enterWord>
-    <button type="submit" (click)="generate(enterWord)">submit</button>
-    </div>
 
-    <div class="field">
+    <div class="inputField" id='d1'>
+        <input type="text" #enterWord>
+        <button mat-raised-button color="primary" (click)="generate(enterWord)">New Word</button>
         <p>word: {{displayWord}}</p>
     </div>
 
-    <div class="inputField">
+    
+
+    <div class="inputField" id='d2'>
         <input type="text" #player1>
-        <button type="submit" (click)="submit1(player1)">submit</button>
+        <button mat-raised-button color="primary" (click)="submit(player1)">Guess</button>
         <p>correct: {{correctLetters}}</p>
         <p>incorrect: {{incorrectLetters}}</p>
         <p>Guesses left: {{guesses}}</p>
-        <p>{{status1}}</p>
+        <p>{{status}}</p>
     </div>
 
-    <div class="inputField">
-        <input type="text" #player2>
-        <button type="submit" (click)="submit2(player2)">submit</button>
-        <p>correct: {{correctLetters}}</p>
-        <p>incorrect: {{incorrectLetters}}</p>
-        <p>Guesses left: {{guesses}}</p>
-        <p>{{status2}}</p>
-    </div>
+    
     
 </div>

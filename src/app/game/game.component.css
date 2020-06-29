@@ -4,14 +4,31 @@
     height: 100vh;
 }
 
-.field{
 
+h1{
+    color: #4232EB;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 6vw;
+    margin-left: 46vw;
 }
+
+
 
 .inputField{
-
+    
+    margin-left: 23vw;
+    margin-top: 20vh;
 }
 
-.inputField{
-    float: left;
+input{
+    border: none;
+    background-color: white;
+    width: 8vw;
+    height: 3vh;
 }
+
+#btn1{
+    
+}
+
+
