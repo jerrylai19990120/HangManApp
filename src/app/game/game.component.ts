@@ -205,6 +205,10 @@ export class GameComponent implements OnInit {
     let canvas: any = document.getElementById('drawings');
     let context: any = canvas.getContext('2d');
     context.clearRect(0, 0, 300, 600);
+    let letters = document.getElementsByClassName('letter');
+    for(let i=0;i<26;i++){
+        this.clicked[i] = false;
+    }
   }
 
   choose(id): void{
