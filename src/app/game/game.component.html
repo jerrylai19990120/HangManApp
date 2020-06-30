@@ -1,7 +1,7 @@
 
 <script type="text/javascript" src="./app.js"></script>
 <div class="board" ng-app='game' ng-controller='gameController'>
-    <img src="../assets/images/icons8-hang-80.png" style="width: 3.6vw; margin-left: 42.6vw; margin-top: 2.6vh;">
+    <img src="assets/images/icons8-hang-80.png" style="width: 3.6vw; margin-left: 42.6vw; margin-top: 2.6vh;">
     <h1><strong>Hang Man</strong></h1>
 
 
@@ -11,8 +11,8 @@
         <button id='restart' mat-raised-button color="primary" (click)="restart()">Play Again</button>
         <input type="text" style="margin-top: 3.6vh;" #Hint>
         <button mat-raised-button color="primary" (click)="hint(Hint)">Hint</button>
-        <p id="word"><img src='../assets/images/icons8-find-and-replace-128.png' class="icons">word: {{displayWord}}</p>
-        <p style="margin-left: 8vw;"><img class="icons" src="../assets/images/icons8-info-80.png">Hint - {{hinting}}</p>
+        <p id="word"><img src='assets/images/icons8-find-and-replace-128.png' class="icons">word: {{displayWord}}</p>
+        <p style="margin-left: 8vw;"><img class="icons" src="assets/images/icons8-info-80.png">Hint - {{hinting}}</p>
     </div>
 
     <div class="lettersGroup">
@@ -49,9 +49,9 @@
     </div>
 
     <div style="float: left; margin-top: 18vh; margin-left: -22vw;">
-            <p style="margin-top: -8vh; color: green;"><img src="../assets/images/icons8-checkmark-96.png" class="icons">correct: {{correctLetters}}</p>
-            <p style="margin-top: 4vh; color: red;"><img src="../assets/images/icons8-multiply-96.png" class="icons">incorrect: {{incorrectLetters}}</p>
-            <p style="margin-top: 4vh;"><img src="../assets/images/icons8-alarm-96.png" class="icons">Guesses left: {{guesses}}</p>
+            <p style="margin-top: -8vh; color: green;"><img src="assets/images/icons8-checkmark-96.png" class="icons">correct: {{correctLetters}}</p>
+            <p style="margin-top: 4vh; color: red;"><img src="assets/images/icons8-multiply-96.png" class="icons">incorrect: {{incorrectLetters}}</p>
+            <p style="margin-top: 4vh;"><img src="assets/images/icons8-alarm-96.png" class="icons">Guesses left: {{guesses}}</p>
             <p style="margin-top: 4vh;">{{status}}</p>
     </div>
 
