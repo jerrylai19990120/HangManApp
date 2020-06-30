@@ -5,7 +5,7 @@
 
 
     <div class="inputField">
-        <input type="text" #enterWord>
+        <input type="password" #enterWord>
         <button mat-raised-button color="primary" (click)="generate(enterWord)">New Word</button>
         <button id='restart' mat-raised-button color="primary" (click)="restart()">Play Again</button>
         <p id="word">word: {{displayWord}}</p>

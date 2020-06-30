@@ -139,7 +139,7 @@ export class GameComponent implements OnInit {
 
 
   generate(input): void{
-    this.word = input.value;
+    this.word = input.value.toLowerCase();
     for(let i=0;i<this.word.length;i++){
       this.displayWord += '*';
     }
