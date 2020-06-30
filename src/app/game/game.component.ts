@@ -16,6 +16,7 @@ export class GameComponent implements OnInit {
   public lettersLeft = 0;
   public status = '';
   public clicked = [];
+  public hinting = '';
 
   constructor() { }
 
@@ -202,19 +203,28 @@ export class GameComponent implements OnInit {
     this.guesses = 10;
     this.lettersLeft = 0;
     this.status = '';
+    this.hinting = '';
     let canvas: any = document.getElementById('drawings');
     let context: any = canvas.getContext('2d');
     context.clearRect(0, 0, 300, 600);
-    let letters = document.getElementsByClassName('letter');
     for(let i=0;i<26;i++){
         this.clicked[i] = false;
     }
   }
 
   choose(id): void{
+    if(this.word === '' || this.status !== ''){
+      return;
+    }
     let letters = document.getElementsByClassName('letter');
     this.submit(letters[id].textContent);
     this.clicked[id] = true;
+  }
+
+  hint(id): void{
+    let val = id.value;
+    this.hinting = val;
+    id.value = '';
   }
 
 

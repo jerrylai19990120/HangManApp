@@ -8,7 +8,7 @@
 h1{
     color: #4232EB;
     font-family: fantasy;
-    margin-top: 1.6vw;
+    margin-top: -5.7vh;
     margin-left: 46vw;
 }
 
@@ -17,6 +17,7 @@ h1{
 .inputField{
     margin-left: 10vw;
     margin-top: 6vh;
+    width: 38vw;
 }
 
 input{
@@ -37,7 +38,7 @@ p{
     height: 52vh;
     float: right;
     margin-right: 26vw;
-    margin-top: -36vh;
+    margin-top: -46vh;
     border: 2px dashed white;
 }
 
@@ -51,17 +52,22 @@ p{
 
 .lettersGroup{
     width: 36vw;
-    margin-top: 10vh;
+    margin-top: 6vh;
     margin-left: 6vw;
 }
 
 #word{
-    margin-top: 8vh;
+    margin-top: 6vh;
     margin-left: 8vw;
 }
 
 #restart{
     margin-left: 4.8vw;
+}
+
+.icons{
+    width: 1.6vw;
+    margin-right: 0.6vw;
 }
 
 
